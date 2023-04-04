@@ -1,20 +1,22 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useCopyToClipboard } from "react-use";
 import { getAccessToken, getMyTracks, getTracks } from "../spotify/api";
-import styles from "../styles/Home.module.css";
 import {
   SpotifyArtist,
   SpotifyItem,
   SpotifyTrack,
   Track,
 } from "../spotify/types";
+import styles from "../styles/Home.module.css";
 
 type HomeProps = {
   tracks: Track[];
 };
 
 const Home: NextPage<HomeProps> = ({ tracks }) => {
+  const [clipboard, copy] = useCopyToClipboard();
   return (
     <div className={styles.container}>
       <Head>
@@ -24,7 +26,17 @@ const Home: NextPage<HomeProps> = ({ tracks }) => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>My latest musical discoveries</h1>
-
+        <br />
+        <h3>⚡ quick import</h3>
+        <button
+          className={styles.button}
+          onClick={() => copy(tracks.map((track) => track.uri).join("\n"))}
+        >
+          {clipboard.value
+            ? "Paste (ctrl/cmd+v) in a Spotify playlist"
+            : "Click to import"}
+        </button>
+        <br />
         <ul className={styles.list}>
           {tracks.map((track) => (
             <li key={track.uri} className={styles.listitem}>

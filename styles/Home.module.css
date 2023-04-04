@@ -32,12 +32,21 @@
 }
 
 .list {
-  display: grid;
-  grid-template-columns: auto auto auto;
   list-style: none;
   padding: unset;
+  text-align: center;
 }
 
 .listitem {
   display: inline;
+}
+
+.button {
+  border: none;
+  background-color: lightcoral;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
