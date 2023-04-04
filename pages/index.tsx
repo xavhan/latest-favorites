@@ -47,7 +47,6 @@ const Home: NextPage<HomeProps> = ({ tracks }) => {
                   height="300"
                   alt={`Cover picture for ${track.name}`}
                 />
-                {/* {track.name} - {track.artists} */}
               </a>
             </li>
           ))}
@@ -55,7 +54,8 @@ const Home: NextPage<HomeProps> = ({ tracks }) => {
       </div>
 
       <footer className={styles.footer}>
-        Made with 🎵 by @xavhan •{" "}
+        Made in 🎵 by @xavhan
+        <br />
         <a href="https://github.com/xavhan/top-of-the-month">Sources</a>
       </footer>
     </div>

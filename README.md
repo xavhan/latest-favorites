@@ -1,15 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## what is it?
 
-## Getting Started
+This experiment aims to display my 50 most recent liked tracks on Spotify. The current state of the Spotify API makes it challenging to do so in a straightforward way.
 
-First, run the development server:
+## dev
+
+Add a SPOTIFY_OAUTH_TOKEN in a `.env.local` file then, run the development server:
 
 ```bash
-npm run dev
-# or
+yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-Dont forget to add a SPOTIFY_OAUTH_TOKEN in a `.env.local` file
+Browse [http://localhost:3000](http://localhost:3000).
