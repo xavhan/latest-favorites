@@ -24,7 +24,7 @@ const Home: NextPage<HomeProps> = ({ tracks }) => {
         <meta name="description" content="@xavhan latest musical discoveries" />
       </Head>
 
-      <main className={styles.main}>
+      <div className={styles.main}>
         <h1 className={styles.title}>My latest musical discoveries</h1>
         <br />
         <h3>⚡ quick import</h3>
@@ -52,7 +52,7 @@ const Home: NextPage<HomeProps> = ({ tracks }) => {
             </li>
           ))}
         </ul>
-      </main>
+      </div>
 
       <footer className={styles.footer}>
         Made with 🎵 by @xavhan •{" "}
