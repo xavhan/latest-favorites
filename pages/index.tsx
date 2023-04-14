@@ -54,8 +54,7 @@ const Home: NextPage<HomeProps> = ({ tracks }) => {
       </div>
 
       <footer className={styles.footer}>
-        Made in 🎵 by @xavhan
-        <br />
+        <span>Made in 🎵 by @xavhan</span>
         <a href="https://github.com/xavhan/top-of-the-month">Sources</a>
       </footer>
     </div>
