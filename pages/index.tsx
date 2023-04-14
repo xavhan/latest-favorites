@@ -39,7 +39,7 @@ const Home: NextPage<HomeProps> = ({ tracks }) => {
         <br />
         <ul className={styles.list}>
           {tracks.map((track) => (
-            <li key={track.uri} className={styles.listitem}>
+            <li key={track.uri}>
               <a href={track.href} target="_blank" rel="noreferrer">
                 <Image
                   src={track.image}

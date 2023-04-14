@@ -36,10 +36,10 @@
   list-style: none;
   padding: unset;
   text-align: center;
-}
-
-.listitem {
-  display: inline;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button {
